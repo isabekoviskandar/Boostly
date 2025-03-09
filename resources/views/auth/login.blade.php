@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Login to boostly</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon.png">
+    <link href="{{ asset('assets/img/boostly.jpeg') }}" rel="icon">
+
     <link href="./css/style.css" rel="stylesheet">
 
 </head>

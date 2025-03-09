@@ -68,7 +68,8 @@
                             measure
                             productivity. Stay organized, monitor your progress, and achieve your goals efficiently.</p>
                         <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
+                            <a href="{{ route('register_page') }}" class="btn-get-started">Get Started <i
+                                    class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
@@ -101,7 +102,7 @@
                                 efficiency with Boostly.
                             </p>
                             <div class="text-center text-lg-start">
-                                <a href="#"
+                                <a href="{{ route('register_page') }}"
                                     class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span>Learn More</span>
                                     <i class="bi bi-arrow-right"></i>
@@ -217,6 +218,7 @@
         </section><!-- /Stats Section -->
 
         <!-- Features Section -->
+        <!-- Features Section -->
         <section id="features" class="features section">
 
             <!-- Section Title -->
@@ -234,47 +236,100 @@
                     </div>
 
                     <div class="col-xl-6 d-flex">
-                        <div class="row align-self-center gy-4">
+                        <div class="row align-self-center gy-4 w-100">
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>To-Do List Management</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#todoList" aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>To-Do List Management</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="todoList">
+                                        <p>Organize your tasks with our intuitive to-do list feature. Create multiple
+                                            lists, set deadlines, add descriptions, and easily mark items as complete.
+                                            Our smart sorting options help you focus on what matters most.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Pomodoro Timer</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#pomodoroTimer"
+                                        aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>Pomodoro Timer</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="pomodoroTimer">
+                                        <p>Boost your productivity with our customizable Pomodoro timer. Work in focused
+                                            intervals, take scheduled breaks, and track your daily focus sessions.
+                                            Adjust work/break durations to match your personal workflow.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Calendar Integration</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#calendarIntegration"
+                                        aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>Calendar Integration</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="calendarIntegration">
+                                        <p>Seamlessly sync with Google Calendar, Outlook, and other popular calendar
+                                            services. View your schedule alongside tasks, set recurring events, and
+                                            receive notifications for upcoming appointments all in one place.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Task Prioritization</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="500">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#taskPrioritization"
+                                        aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>Task Prioritization</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="taskPrioritization">
+                                        <p>Prioritize your workload with our flexible system. Assign importance levels,
+                                            use color coding, and implement the Eisenhower Matrix to distinguish between
+                                            urgent and important tasks. Never miss critical deadlines again.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Event Reminders</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="600">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#eventReminders"
+                                        aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>Event Reminders</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="eventReminders">
+                                        <p>Stay on track with customizable notifications. Set multiple reminders per
+                                            task, choose from email, desktop, or mobile alerts, and configure
+                                            notification timing that works for your schedule.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
-                            <div class="col-md-6" data-aos="fade-up" data-aos-delay="700">
-                                <div class="feature-box d-flex align-items-center">
-                                    <i class="bi bi-check"></i>
-                                    <h3>Progress Tracking</h3>
+                            <div class="col-md-12" data-aos="fade-up" data-aos-delay="700">
+                                <div class="feature-item">
+                                    <div class="feature-box d-flex align-items-center dropdown-toggle"
+                                        data-bs-toggle="collapse" data-bs-target="#progressTracking"
+                                        aria-expanded="false">
+                                        <i class="bi bi-check"></i>
+                                        <h3>Progress Tracking</h3>
+                                    </div>
+                                    <div class="collapse feature-description" id="progressTracking">
+                                        <p>Monitor your productivity with detailed analytics. View completion rates,
+                                            track time spent on tasks, identify productivity patterns, and generate
+                                            reports to continuously improve your workflow efficiency.</p>
+                                    </div>
                                 </div>
                             </div><!-- End Feature Item -->
 
@@ -286,6 +341,69 @@
             </div>
 
         </section><!-- /Features Section -->
+
+        <!-- Add this CSS to your stylesheet -->
+        <style>
+            .feature-item {
+                margin-bottom: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .feature-box {
+                cursor: pointer;
+                position: relative;
+                padding: 15px 40px 15px 15px;
+                transition: all 0.3s ease;
+                background-color: #f8f9fa;
+                margin-bottom: 0;
+            }
+
+            .feature-box:hover {
+                background-color: #f1f3f5;
+            }
+
+            .feature-box::after {
+                content: "\f282";
+                font-family: "bootstrap-icons";
+                position: absolute;
+                right: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            .feature-box[aria-expanded="true"]::after {
+                transform: rotate(180deg);
+            }
+
+            .feature-box h3 {
+                margin-bottom: 0;
+            }
+
+            .feature-description {
+                padding: 15px;
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+            }
+
+            .feature-description p {
+                margin-bottom: 0;
+            }
+
+            /* Ensure smooth transition for the collapse */
+            .collapse {
+                transition: height 0.35s ease;
+            }
+
+            /* Fix for full width */
+            .col-xl-6.d-flex {
+                display: flex;
+            }
+
+            .row.align-self-center {
+                width: 100%;
+            }
+        </style>
 
 
 
