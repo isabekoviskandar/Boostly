@@ -27,22 +27,24 @@
                                         <div class="form-group">
                                             <label><strong>Email</strong></label>
                                             <input type="email" class="form-control" name="email"
-                                                placeholder="example@gmail.com">
+                                                placeholder="example@gmail.com" value="{{ old('email') }}">
+                                            @error('email')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <label><strong>Password</strong></label>
                                             <input type="password" class="form-control" name="password"
                                                 placeholder="Your password">
-                                        </div>
-                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
-                                            <div class="form-group">
-                                                <a href="page-forgot-password.html">Forgot Password?</a>
-                                            </div>
+                                            @error('password')
+                                                <div class="text-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                         <div class="text-center">
                                             <button type="submit" class="btn btn-primary btn-block">Sign me in</button>
                                         </div>
                                     </form>
+
                                     <div class="new-account mt-3">
                                         <p>Don't have an account? <a class="text-primary"
                                                 href="{{ route('register_page') }}">Sign up</a></p>

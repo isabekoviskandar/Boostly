@@ -22,12 +22,17 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect('/');
+        if (!User::where('email', $request->email)->exists()) {
+            return back()->withErrors(['email' => 'No account found with this email.']);
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        if (!Auth::attempt($credentials)) {
+            return back()->withErrors(['password' => 'Incorrect password.']);
+        }
+
+        return redirect('/admin');
     }
+
 
     public function register(Request $request)
     {
